@@ -1,0 +1,7 @@
+Margareta       35
+Vegetarian      40
+Mushroom        45
+Barbeque        55
+Special	        60
+Fries           10
+Cola            04

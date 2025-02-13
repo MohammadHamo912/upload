@@ -1,0 +1,186 @@
+pwd
+ls
+clear
+mkdir : mkdir + nameOfDiercotory
+rmdir
+touch(make file)
+rm
+cd( .-> for current directory / ..-> parent directory/ - -> last path)
+pico : write in file
+nano : write in file
+cat : print what in file
+cp ( copy from source to destination)
+mv (rename old new)
+mv (move the file to another destination or path)
+ls -l(details for list     / permetions -> user , group ,other --> read write execute 
+      first one from the ten dashs ( first one form left) shows the type of the file
+	where : - -> file / d -> directory / l -> symbolic link)
+
+>>  (redirection shows the output in the destination written after it)
+( ">>" -> append / while ">" overwrite  / 2> append errors)
+
+
+
+echo (printf  you can use what after it with " " or ' ' or nothing)
+man (manual)
+ls -a ( -a shows all)
+rm -r( remove recusrively remove every thing)
+rm -i(remove for security)
+alias (gives a nickname for the command, ex : alias ls='echo hello world' , it will
+ 	print hello world (it is case sensetive even for spaces be sure to write it the right way
+	)
+unalias (remove the nickname ,ex after dong the alias the line above : unalias ls)
+
+to initilaize a variable (write its name with (=) without spaces ex : naem="mohammad")
+to print a variable -> echo $nameOfVariable
+we are working on bash shell
+
+built in variables : (examples SHELL /USER)
+
+cat -n (shows the number of lines)
+
+head (print the first 10 haed)
+tail (print the last 10  tail)
+
+chmod ( example chmod 754 test.txt   /change permissions from ls -l)
+
+chmod +w filename.txt (give permission for write for everyone
+----------------------------
+links : 1-simple link : create a pointer to the file and if you deleted the file it will point to null
+	2-hard link : create a copy of the file and make the cahnges automatically and if you deleted
+			the original file it wont be affected
+
+1- simple link : ln -s SRC.txt LINKNAME
+2- hard link : ln SRC.txt LINKNAME
+--------------------------------
+sort file.txt (sort alphabatically using ascii)
+sort -n file.txt ( sort numerically)
+-o after the comand is similar to >> (ex : sort -n file.txt -o res.txt --> sort the files numerically
+				and put them in the file res.txt)
+
+uniq file.txt ( to work properly the file should be sorted)
+uniq can take two arguments ( ex : uniq src.txt dis.txt)
+
+grep ( ex: grep mohamamd sort.txt --> search for "mohammad" in the file and return all the line)
+grep -n mohammad file.txt(return the same as the normal grep + its line number)
+grep -v mohammad file.txt( search for everything instead of mohammad)
+you can search more than one file in the same directory by doing
+grep mohammad *.txt
+
+grep '[a-z]' myfile.txt ( search for everything in this range and return all the line)
+grep '[a-z 0-9]' file.txt ( search for more than one parameter's range)
+
+grep '[a-z]....[a-z]' file.txt( search for a word that starts and ends with a small letter and its
+			length =  letter (small letter + 4 dots + small letter =6) )
+grep 'ext$' file.txt (return the line that containts a word that ends with the combination 'ext')
+grep '^ext' file.txt ( return what starts with 'ext')
+
+if we want to search for dot in a grep we should put \. not . to make the terminal understand
+
+ps : shows processes
+ps -f : full formating
+ps -e : shows the hidden processes also
+
+kill -l : shows the options we can do with procceses
+
+kill -SIGKILL ___ (kills the proccess) or kill -9 ___
+
+kill % ( % is replaced by the last executed process
+
+date : shows full date
+
+wc file.txt ( word count : output 3 numbers the first one number of lines second one number of words
+			third one number of letters)
+wc -l ( only lines)
+wc -w (only words)
+wc -c (only characters(letters))
+
+
+
+| : pipe (do more than one command or operation in one line , transfer the output to right the pipe)
+
+cut -cFIRSTLETTER-LASTLETTER( where first and last are included)
+cut -d: -f1 (where -d(delimeter), : is the delimeter, f1 first gap)
+
+paste file1.txt file2.txt (concat the two files together , you can add more than two files)
+paste -d'+' file1.txt file2.txt file3.txt (concat all of them with a delimeter '+')
+paste -s (order horizontally not vertically)
+
+find . -name filename.txt -print (print the path of a certain file inside your children)
+find / -name "*lena*".txt -print (print the path of a certain file from all files in the device 
+			and i dont know its full name but i know it contains "lena" in it)
+
+tr o x < file.txt ( translate the o's to x's from the file.txt and in it
+
+tr -s ' ' ' ' < file.txt (-s means group of the characters)
+tr -d '[0-9]' < file.txt (-d means delete here not a delimeter )
+
+
+grep '\<t..n\>' files.txt ( return a word start with t and ends with n and has spaces before and after 
+	and consists of 4 letters)
+
+to find the emptyline : grep ^$ -n file.txt 
+
+you can find the vowels by : grep '[aoeyuw]' file.txt
+
+if you want to search fot the word "the" but t can be caputal "T" : grep '[Tt]he' file.txt
+
+
+if you want to search for the numbers from 80-89 : grep 8[0-9] file.txt
+you cant write grep [80-89] file.txt becuase it only deals with digits
+grep [89][0-9] file.txt ( shows from 80-99)
+
+if you want to search for the dash or square bracket you can put it before the number
+ex: grep '[-0-9]' or grep '[[0-9]' you should put the numbers
+
+if you want to search for a letter starts with a capital : grep ^'[A-Z]' or grep '^[A-Z]'
+if we put the ^ inside the pracket it will understand it as not
+ex : if we write grep '[^A-Z]' file.txt --> return every non capital letter'
+
+grep -n '^[^A-Z a-z 0-9]' file.txt : return the line that starts with a special character
+
+grep '[t*]' file.txt (* : matches everything the same as the parameter)
+
+grep '[A-Z a-z]\{8,20\}' file.txt ( return all the words that has a length of 8-20 consists of
+			upper or lower casses
+grep '[A-Za-z]\{4,\}' file.txt ( return all the words that are longer than 4 characters)
+
+grep '\(.\)' file.txt (save the first character on the first register from the file.txt)
+grep '\(.\)\(.\)' save the first chat in the first register and the second char on the second register
+grep '\(.\)\1' file.txt ( save the first char on reg 1 then call it(\1 search for the char saved in reg1)
+grep '\(..\)\1' save first two char in reg 1
+grep '\(.\)\1\1' show a repetition of 3 in the first register
+grep '\(.\).*\1$' file.txt save the first chat at first reg then find any chat between the first and 
+		the last chat but the last one should be the same as the saved in the reg
+
+look at the manual it may help you
+
+
+sed 's/word/WORD/' sed.txt ( replace the first word in everyline to WORD inside the file)
+sed 's/word/WORD/g' sed.txt ( replace all word to WORD inside the file)
+s in '' means repalce
+the comands above doesnt change the original file
+if we put sed -u 's/word/WORD/' sed.txt it will save the original file
+
+sed '2,3d' sec.txt delete the lines 2 to 3 included
+
+look at the manual importantttt
+
+ 
+------------------------------------------------------
+you should not put spaces between the variable name and =
+
+echo $((arithmetic operation ))
+or 
+expr 1 + 2 (with spaces)
+or expr 1 \* 2 ( for multiplication)
+
+
+when you want to put paranthese(للاولويات) you should put \( instead of ( and \) instead of )
+
+
+echo $* print the values in registers
+echo $# print the number of registers ( length)
+
+shift : shift the segments to the left
+shift 2 : shift 2 segments to left

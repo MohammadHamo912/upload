@@ -1,0 +1,21 @@
+# Format: [timestamp] [IP address] [username] [HTTP method] [request URL] [HTTP status code] [referrer] [user agent]
+
+[2024-03-16 12:05:34] 192.168.1.101 user1 GET /index.html 200 - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1234.5678 Safari/537.36"
+[2024-03-16 12:07:21] 192.168.1.102 user2 POST /login 401 http://example.com/login "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/100.0 Firefox/100.0"
+[2024-03-16 12:10:45] 192.168.1.103 user3 GET /about.html 200 - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1234.5678 Safari/537.36"
+[2024-03-16 12:12:59] 192.168.1.104 user1 GET /contact.html 404 - "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:100.0) Gecko/100.0 Firefox/100.0"
+[2024-03-16 12:15:27] 192.168.1.105 user4 GET /products.html 200 - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1234.5678 Safari/537.36"
+[2024-03-16 12:18:03] 192.168.1.106 user5 POST /register 200 - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1234.5678 Safari/537.36"
+[2024-03-16 12:20:59] 192.168.1.107 user2 GET /dashboard.html 200 - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1234.5678 Safari/537.36"
+[2024-03-16 12:25:12] 192.168.1.108 user3 GET /profile.html 403 - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1234.5678 Safari/537.36"
+[2024-03-16 12:30:15] 192.168.1.109 user1 GET /index.html 200 - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1234.5678 Safari/537.36"
+[2024-03-16 12:35:29] 192.168.1.110 user2 POST /login 200 http://example.com/login "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1234.5678 Safari/537.36"
+[2024-03-16 12:40:17] 192.168.1.111 user3 GET /about.html 200 - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1234.5678 Safari/537.36"
+[2024-03-16 12:45:49] 192.168.1.112 user4 GET /products.html 404 - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1234.5678 Safari/537.36"
+[2024-03-16 12:50:38] 192.168.1.113 user5 POST /register 200 - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1234.5678 Safari/537.36"
+[2024-03-16 12:55:27] 192.168.1.114 user1 GET /contact.html 200 - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1234.5678 Safari/537.36"
+[2024-03-16 13:00:11] 192.168.1.115 user2 GET /dashboard.html 200 - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1234.5678 Safari/537.36"
+[2024-03-16 13:05:48] 192.168.1.116 user3 POST /login 401 http://example.com/login "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1234.5678 Safari/537.36"
+[2024-03-16 13:10:23] 192.168.1.117 user4 GET /products.html 200 - "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1234.5678 Safari/537.36"
+[2024-03-16 13:15:19] 192.168.1.118 user5 POST /register 200 - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/100.0.1234.5678 Safari/537.36"
+[2024-03-16 13:20:57] 192.168.1.119 user1 GET /index.html 200 - "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like
